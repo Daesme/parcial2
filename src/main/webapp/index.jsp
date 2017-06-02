@@ -14,7 +14,7 @@ body {
  
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Crunchify JSP Servlet Example</title>
+<title>Dash Board: Colmena Graficas </title>
 </head>
 <h1 align="center"> Dash Board </h1>
 <body>

@@ -30,16 +30,6 @@ import java.util.logging.Logger;
  
 
 public class Visitas_tecnicasDao  {
-
-    
-    
-    
-    
-   
-    
-    
-    
-    
     
     
 	/**
@@ -115,8 +105,8 @@ public class Visitas_tecnicasDao  {
 	    return Visitas;
 	}
 
-	public List<Recoleccion> findAll2() {
-		List<Recoleccion> Recoleccion= null;
+	public LinkedList<Recoleccion> findAll2() {
+		LinkedList<Recoleccion> Recoleccion= null;
 	    String query = "SELECT * FROM recoleccion";
 	    Connection connection = null;
             try {
@@ -136,7 +126,7 @@ public class Visitas_tecnicasDao  {
             
 	    while (rs.next()){
 	    	if(Recoleccion == null){
-	    		Recoleccion= new ArrayList<Recoleccion>();
+	    		Recoleccion= new LinkedList<Recoleccion>();
 	    	}
 	      
 	        Recoleccion registro= new Recoleccion();
@@ -170,87 +160,4 @@ public class Visitas_tecnicasDao  {
 	    
 	    return Recoleccion;
 	}
-
-	
-	/**
-	 * Funcion que permite realizar la insercion de un nuevo registro en la tabla Visitas_Tecnicas
-	 * @param Departamento recibe un objeto de tipo Visitas_Tecnicas 
-	 * @return boolean retorna true si la operacion de insercion es exitosa.
-	 */
-////	public boolean insert(Visitas_Tecnicas t) {
-////		boolean result=false;
-////		Connection connection=null;
-////            try {
-////                connection = Conexion.getConnection();
-////            } catch (URISyntaxException ex) {
-////                Logger.getLogger(Visitas_tecnicasDao.class.getName()).log(Level.SEVERE, null, ex);
-////            }
-////	    String query = " insert into Depto (id_depto,nom_depto)"  + " values (?,?)";
-////        PreparedStatement preparedStmt=null;
-////	    try {
-////			preparedStmt = connection.prepareStatement(query);
-////			preparedStmt.setInt (1, t.getId_departamento());
-////                        preparedStmt.setString (2, t.getNom_departamento());
-////			result= preparedStmt.execute();
-////	    } catch (SQLException e) {
-////			e.printStackTrace();
-////		}
-////		return result;
-////	}
-////
-////	/**
-////	 * Funcion que permite realizar la actualizacion de un nuevo registro en la tabla Visitas_Tecnicas
-////	 * @param Departamento recibe un objeto de tipo Visitas_Tecnicas 
-////	 * @return boolean retorna true si la operacion de actualizacion es exitosa.
-////	 */
-////	public boolean update(Visitas_Tecnicas t) {
-////		boolean result=false;
-////		Connection connection= null;
-////            try {
-////                connection = Conexion.getConnection();
-////            } catch (URISyntaxException ex) {
-////                Logger.getLogger(Visitas_tecnicasDao.class.getName()).log(Level.SEVERE, null, ex);
-////            }
-////		String query = "update Depto set nom_depto = ? where id_depto = ?";
-////		PreparedStatement preparedStmt=null;
-////		try {
-////		    preparedStmt = connection.prepareStatement(query);
-////		    preparedStmt.setString(1, t.getNom_departamento());
-////                    preparedStmt.setInt   (2, t.getId_departamento());
-////		    if (preparedStmt.executeUpdate() > 0){
-////		    	result=true;
-////		    }
-////			    
-////		} catch (SQLException e) {
-////				e.printStackTrace();
-////		}
-////			
-////		return result;
-////	}
-////
-////	/**
-////	 * Funcion que permite realizar la eliminario de registro en la tabla Visitas_Tecnicas
-////	 * @param Departamento recibe un objeto de tipo Visitas_Tecnicas 
-////	 * @return boolean retorna true si la operacion de borrado es exitosa.
-////	 */
-////	public boolean delete(Visitas_Tecnicas t) {
-////	   boolean result=false;
-////	   Connection connection = null;
-////            try {
-////                connection = Conexion.getConnection();
-////            } catch (URISyntaxException ex) {
-////                Logger.getLogger(Visitas_tecnicasDao.class.getName()).log(Level.SEVERE, null, ex);
-////            }
-////	   String query = "delete from Depto where id_depto = ?";
-////	   PreparedStatement preparedStmt=null;
-////	   try {
-////		     preparedStmt = connection.prepareStatement(query);
-////		     preparedStmt.setInt(1, t.getId_departamento());
-////		    result= preparedStmt.execute();
-////		} catch (SQLException e) {
-////			e.printStackTrace();
-////		}
-////	   
-////	   return result;
-////	}
 }

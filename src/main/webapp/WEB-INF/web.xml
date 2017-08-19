@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-    version="3.0">
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
     <display-name>CrunchifyJSPServletExample</display-name>
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
@@ -17,7 +17,10 @@
         <servlet-name>Hello</servlet-name>
         <servlet-class>com.crunchify.jsp.servlet.HelloCrunchify</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>LLmadoAjax</servlet-name>
+        <servlet-class>LLmadoAjax</servlet-class>
+    </servlet>
     <servlet>
         <servlet-name>ChartServlet1</servlet-name>
         <servlet-class>com.crunchify.jsp.servlet.ChartServlet1</servlet-class>
@@ -32,12 +35,16 @@
         <url-pattern>/CrunchifyServlet</url-pattern>
     </servlet-mapping>
     
-     <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ChartServlet1</servlet-name>
         <url-pattern>/ChartServlet1</url-pattern>
     </servlet-mapping>
-      <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>ChartServlet</servlet-name>
         <url-pattern>/ChartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LLmadoAjax</servlet-name>
+        <url-pattern>/LLmadoAjax</url-pattern>
     </servlet-mapping>
 </web-app>

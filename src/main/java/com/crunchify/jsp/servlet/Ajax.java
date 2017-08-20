@@ -6,26 +6,25 @@ package com.crunchify.jsp.servlet;
  * and open the template in the editor.
  */
 
+import com.google.gson.Gson;
 import edu.co.sergio.mundo.dao.Visitas_tecnicasDao;
 import edu.co.sergio.mundo.vo.Recoleccion;
-import edu.co.sergio.mundo.vo.Visitas_Tecnicas;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Statement;
 import java.util.LinkedList;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.google.gson.Gson;
 
 /**
  *
  * @author crist
  */
-public class LLmadoAjax extends HttpServlet {
-
-    public String getJson(){
+@WebServlet(urlPatterns = {"/ajax"})
+public class Ajax extends HttpServlet {
+ public String getJson(){
         LinkedList<Recoleccion> re = new LinkedList<Recoleccion>();
         Visitas_tecnicasDao vi = new Visitas_tecnicasDao();
         re = vi.findAll2();
@@ -39,6 +38,7 @@ public class LLmadoAjax extends HttpServlet {
         out.close();
         
     }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

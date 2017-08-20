@@ -44,17 +44,6 @@ public class ChartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-//            try{
-//            response.setContentType("image/png");
-//            OutputStream outputStream = response.getOutputStream();
-//            JFreeChart charte = getChart2();
-//            int width = 500;
-//            int height = 350;
-//            ChartUtilities.writeChartAsPNG(outputStream, charte, width, height);
-//        } catch (URISyntaxException ex) {
-//            Logger.getLogger(ChartServlet.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//
             try {
         	response.setContentType("image/png");
 		OutputStream outputStream = response.getOutputStream();
@@ -132,37 +121,5 @@ public class ChartServlet extends HttpServlet {
         return chart;
 
     }
-        
-        
-        
-        
-
-//	public JFreeChart getChart() {
-//		
-//                DefaultPieDataset dataset = new DefaultPieDataset();
-//	        //Crear la capa de servicios que se enlace con el DAO
-//                
-//                Visitas_tecnicasDao dep=new Visitas_tecnicasDao();
-//                LinkedList <Visitas_Tecnicas>c=(LinkedList) dep.findAll();
-//               
-//            
-//                dataset.setValue("verga",123);
-//                
-////            for (int i = 0; i < c.size(); i++) {
-////                dataset.setValue(c.get(i).getTecnico(),c.get(i).getPanalesconaimento());
-////            }
-//            
-//		boolean legend = true;
-//		boolean tooltips = false;
-//		boolean urls = false;
-//
-//		JFreeChart chart = ChartFactory.createPieChart("Informacion Panal Colmena", dataset, legend, tooltips, urls);
-//
-//		chart.setBorderPaint(Color.GREEN);
-//		chart.setBorderStroke(new BasicStroke(5.0f));
-//		chart.setBorderVisible(true);
-//
-//		return chart;
-//	}
 
 }

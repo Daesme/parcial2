@@ -18,8 +18,8 @@
         <servlet-class>com.crunchify.jsp.servlet.HelloCrunchify</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LLmadoAjax</servlet-name>
-        <servlet-class>LLmadoAjax</servlet-class>
+        <servlet-name>Ajax</servlet-name>
+        <servlet-class>Ajax</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ChartServlet1</servlet-name>
@@ -44,7 +44,7 @@
         <url-pattern>/ChartServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LLmadoAjax</servlet-name>
-        <url-pattern>/LLmadoAjax</url-pattern>
+        <servlet-name>Ajax</servlet-name>
+        <url-pattern>/ajax</url-pattern>
     </servlet-mapping>
 </web-app>
